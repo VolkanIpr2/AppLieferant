@@ -3,21 +3,21 @@ import { useRouter } from "next/router";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
-export default function login() {
-    const [benutzer, setBenutzer] = useState(null);
-    const [passwort, setPasswort] = useState(null);
+export default function Login() {
+    const [benutzer, setBenutzer] = useState("");
+    const [passwort, setPasswort] = useState("");
     const [error, setError] = useState(false);
     const router = useRouter();
 
-    const login = async () => {
+    const handleLogin = async () => {
         try {
-            await axios.post("http://localhost:3000/api/login",{
+            await axios.post("/api/login", {
                 benutzer,
                 passwort
-            })
-            router.push("/backend")
+            });
+            router.push("/backend");
         } catch (error) {
-            setError(true)
+            setError(true);
         }
     }
 
@@ -28,16 +28,20 @@ export default function login() {
             <div className="row mt-4">
                 <Form>
                     <Form.Group className="mb-3" controlId="benutzer">
-                        <Form.Control type="text" placeholder="Benutzer"
+                        <Form.Control
+                            type="text"
+                            placeholder="Benutzer"
                             onChange={(e) => setBenutzer(e.target.value)}
                         />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="passwort">
-                        <Form.Control type="password" placeholder="Passwort"
+                        <Form.Control
+                            type="password"
+                            placeholder="Passwort"
                             onChange={(e) => setPasswort(e.target.value)}
                         />
                     </Form.Group>
-                    <Button variant="primary" onClick={login}>
+                    <Button variant="primary" onClick={handleLogin}>
                         Login
                     </Button>
                 </Form>
