@@ -1,0 +1,33 @@
+{
+  "name": "liefermax",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@paypal/react-paypal-js": "^8.4.0",
+    "@reduxjs/toolkit": "^2.2.5",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "cookie": "^0.6.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18",
+    "react-redux": "^9.1.2",
+    "react-toastify": "^10.0.5",
+    "redux": "^5.0.1",
+    "sass": "^1.77.4",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
+  }
+}
