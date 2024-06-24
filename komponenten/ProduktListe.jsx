@@ -7,7 +7,7 @@ export default function ProduktListe({ produkte }) {
             <div className="row row-cols-3">
                 {produkte?.map((produkt) => (
                     <div key={produkt.name} className="mt-3 col">
-                       <Card>
+                        <Card>
                             <Link href={`/produkte/${produkt.url}`}>
                                 <Card.Img variant="top" src={produkt.bild} style={{ cursor: 'pointer' }} />
                             </Link>
@@ -20,7 +20,7 @@ export default function ProduktListe({ produkte }) {
                                     {produkt.beschreibung}
                                 </Card.Text>
                                 <Link href={`/produkte/${produkt.url}`}>
-                                    <Button variant="danger" as="a" style={{ textDecoration: 'none' }}>
+                                    <Button variant="danger" style={{ textDecoration: 'none' }}>
                                         Bestellen
                                     </Button>
                                 </Link>
