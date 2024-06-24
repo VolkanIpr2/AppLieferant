@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import { ToastContainer } from "react-toastify"
 
 function MyApp({ Component, pageProps }) {
+  
   return (
     <Provider store={store}>
       <ToastContainer />
