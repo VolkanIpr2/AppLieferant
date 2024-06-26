@@ -110,6 +110,7 @@ export async function getServerSideProps(ctx) {
         : process.env.NEXT_PUBLIC_API_BASE_URL_LOCAL;
 
     const res = await axios.get(`${API_BASE_URL}/api/bestellungen`);
+    
     return {
         props: { bestellungen: res.data },
     };
