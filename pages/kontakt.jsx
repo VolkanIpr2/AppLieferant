@@ -49,7 +49,11 @@ const Kontakt = () => {
     if (Object.keys(errors).length === 0) {
       setIsSubmittingDetails(true);
       try {
-        await axios.post('https://formsubmit.co/ajax/volkan_751@hotmail.de', formData);
+        await axios.post('/api/sendEmail', {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message')
+        });
         toast.success('Details sent successfully!');
       } catch (error) {
         console.error('Error sending details:', error);
@@ -155,10 +159,10 @@ const Kontakt = () => {
         </button>
       </form>
 
-      <h2 style={{ textAlign: 'center', color: 'white' }}>Feedbacks</h2>
+      <h2 style={{ textAlign: 'center' }}>Feedbacks</h2>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {feedbacks.map(feedback => (
-          <li key={feedback._id} style={{ color: "white", padding: '10px', borderBottom: '1px solid #ccc' }}>
+          <li key={feedback._id} style={{ padding: '10px', borderBottom: '1px solid #ccc' }}>
             <p><strong>{feedback.name}:</strong> {feedback.feedback}</p>
           </li>
         ))}
