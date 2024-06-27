@@ -1,3 +1,26 @@
+UserStorys:
+
+1. Übersicht der Produkte
+2. Warenkorb Artikel hinzufügen
+3. Warenkorb Artikel löschen
+4. Bezahlen mit PayPal
+5. User kann Bestellstatus sehen
+6. Admin kann sich einloggen
+7. Admin kann Bestellung löschen
+8. Admin kann Bestellstatus ändern
+9. Admin kann Artikel in die Produktübersich hinzufügen
+10. User kann Feedback schreiben
+11. Feedback kann unten gelesen werden
+12. User kann Email senden über Email-Formular
+13. Admin kann Email lesen in seinem Emailfach
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
